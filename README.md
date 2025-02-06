@@ -1,36 +1,55 @@
 # strapi-plugin-yt-clips
 
-Select video clip.
+CORS Settings
 
+Make this changes in config/middlewares.ts file in your strapi project.
 
 ```
-module.exports = [
-  'strapi::errors',
+export default [
+  "strapi::logger",
+  "strapi::errors",
   {
-    name: 'strapi::security',
+    name: "strapi::security",
     config: {
       contentSecurityPolicy: {
+        useDefaults: true,
         directives: {
-          defaultSrc: ["'self'", 'https://www.youtube.com'], // Allow self and YouTube
-          frameSrc: ["'self'", 'https://www.youtube.com'], // Allow framing from YouTube
+          "connect-src": ["'self'", "https:"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "https://www.youtube.com",
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "https://www.youtube.com",
+          ],
+          "frame-src": ["'self'", "https://www.youtube.com"],
+          upgradeInsecureRequests: null,
         },
       },
     },
   },
-  'strapi::poweredBy', // here
   {
-    name: 'strapi::cors',
+    name: "strapi::cors",
     config: {
-      enabled: true, // deprecated in v4.25.8
-      headers: '*',
-      origin: ['http://localhost:1337', 'http://example2'],
+      origin: ["http://localhost:3000", "https://www.youtube.com"],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      keepHeaderOnError: true,
     },
   },
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::poweredBy",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
-```# strapi-plugin-yt-clips
+
+```

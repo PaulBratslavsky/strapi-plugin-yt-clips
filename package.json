@@ -1,6 +1,6 @@
 {
-  "version": "0.0.1",
-  "keywords": ["youtube"],
+  "version": "0.0.2",
+  "keywords": ["youtube", "strapi", "plugin", "yt-clips"],
   "type": "commonjs",
   "repository": {
     "type": "git",
