@@ -3,8 +3,8 @@ import type { Core } from '@strapi/strapi';
 const register = ({ strapi }: { strapi: Core.Strapi }) => {
   // register phase
   strapi.customFields.register({
-    name: "youtube",
-    plugin: "yt-video-clip",
+    name: "strapi-plugin-yt-clips",
+    plugin: "strapi-plugin-yt-clips",
     type: 'json',
     
   });

@@ -1,7 +1,11 @@
 {
-  "version": "0.0.0",
-  "keywords": [],
+  "version": "0.0.1",
+  "keywords": ["youtube"],
   "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulBratslavsky/strapi-plugin-yt-clips"
+  }, 
   "exports": {
     "./package.json": "./package.json",
     "./strapi-admin": {
@@ -60,11 +64,11 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "yt-video-clip",
+    "name": "strapi-plugin-yt-clips",
     "displayName": "YT Video Clip",
     "description": "Select video clip."
   },
-  "name": "yt-video-clip",
+  "name": "strapi-plugin-yt-clips",
   "description": "Select video clip.",
   "license": "MIT",
   "author": "Paul Brats <paul.bratslavsky@strapi.io>"

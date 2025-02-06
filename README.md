@@ -1,4 +1,4 @@
-# yt-video-clip
+# strapi-plugin-yt-clips
 
 Select video clip.
 

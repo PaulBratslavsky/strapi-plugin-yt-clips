@@ -84,8 +84,8 @@ const Input = ({ name, value, onChange }: InputProps) => {
         }}
       />
 
-      <pre>{JSON.stringify(videoData, null, 2)}</pre>
-      <pre>{JSON.stringify(value)}</pre>
+      {/* <pre>{JSON.stringify(videoData, null, 2)}</pre>
+      <pre>{JSON.stringify(value)}</pre> */}
 
       {videoData?.videoId && (
         <ResponsiveIframeContainer>

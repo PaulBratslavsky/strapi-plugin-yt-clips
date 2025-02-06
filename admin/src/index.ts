@@ -7,17 +7,17 @@ export default {
   register(app: any) {
   
     app.customFields.register({
-      name: 'youtube',
+      name: 'strapi-plugin-yt-clips',
       pluginId: PLUGIN_ID,
       icon: PluginIcon,
       type: 'json',
       intlLabel: {
         id: `${PLUGIN_ID}.plugin.name`,
-        defaultMessage: "Youtube",
+        defaultMessage: "Youtube Clips",
       },  
       intlDescription: {
         id: `${PLUGIN_ID}.plugin.description`,
-        defaultMessage: PLUGIN_ID,
+        defaultMessage: "Youtube Clips",
       },
       components: {
         Input: async () => import('./components/Input'),

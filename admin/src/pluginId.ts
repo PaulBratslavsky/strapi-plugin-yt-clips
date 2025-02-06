@@ -1,1 +1,1 @@
-export const PLUGIN_ID = 'yt-video-clip';
+export const PLUGIN_ID = 'strapi-plugin-yt-clips';
